@@ -12,14 +12,13 @@ gulp.task('html', function () {
     .pipe(connect.reload());
 });
 gulp.task('js', function () {
-  gulp.src('./src/*.js')
-  	.src('./demo/*.js')
+  gulp.src(['./src/*.js','./demo/*.js'])
     .pipe(connect.reload());
 });
  
 gulp.task('watch', function () {
-  gulp.watch(['./*.html'], ['html']);
-  gulp.watch(['./*/*.js'], ['js']);
+  gulp.watch(['./demo/*.html'], ['html']);
+  gulp.watch(['./src/*.js','./demo/*.js'], ['js']);
 });
 
 

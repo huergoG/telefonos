@@ -1,0 +1,35 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telefono Directive-Filter</title>
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+   <!-- <link rel="stylesheet" type="text/css" href="style.css">-->
+  </head>
+  <body ng-app="demoApp">
+    <div layout="row">
+      <div flex="33" offset="33" ng-controller="telefonoController as tel">
+
+        Telefono <span ng-bind="tel.telefono | tel"></span>
+      </div>
+    </div>
+  </body>
+
+  <!-- Application Dependencies -->
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-material/angular-material.js"></script>
+  <script src="../node_modules/angular-animate/angular-animate.js"></script>
+  <script src="../node_modules/angular-aria/angular-aria.js"></script>
+  <script src="../node_modules/angular-md5/angular-md5.js"></script>
+  <script src="../node_modules/angular-ui-mask/dist/mask.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="app.js"></script>
+  <script src="../src/codigoArea.js"></script>
+  <script src="../src/telefono.module.js"></script>
+  <script src="../src/telefonoFilter.js"></script>
+  <script src="../src/telefonoDirective.js"></script>
+</html>

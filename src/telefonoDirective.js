@@ -3,7 +3,7 @@
     'use strict';
 	
 	angular
-		.module('telefonoDirective',['ui-mask'])
+		.module('telefonoDirective',['ui.mask'])
 		.directive('telefono',telefono);
 
 		function telefono(){
