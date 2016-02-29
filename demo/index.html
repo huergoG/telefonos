@@ -22,7 +22,7 @@
         <div layout="row">
           <md-input-container>
               <label>Telefono</label>
-              <input name="telefono" ng-model="tel.telefono" required md-maxlength="13" minlength="6">
+              <input name="telefono" ng-model="tel.telefono" required ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}" md-maxlength="13" minlength="6">
               <div ng-messages="tel.telefono.$error" ng-show="tel.telefono.$dirty">
                 <div ng-message="required">This is required!</div>
                 <div ng-message="md-maxlength">That's too long!</div>

@@ -13,6 +13,8 @@
 		function telefonoController($scope){
 			var tel = this;
 
+			tel.mask = '(99) 9999-9999';
+			tel.mask_placeholder = "";
 			tel.telefono = 1123456789;
 		};
 	
