@@ -1,4 +1,4 @@
-<!-- index.html -->
+  <!-- index.html -->
 
 <!DOCTYPE html>
 <html>
@@ -10,12 +10,39 @@
    <!-- <link rel="stylesheet" type="text/css" href="style.css">-->
   </head>
   <body ng-app="demoApp">
-    <div layout="row">
-      <div flex="33" offset="33" ng-controller="telefonoController as tel">
-
-        Telefono <span ng-bind="tel.telefono | tel"></span>
+     <div layout="column" layout-fill>
+        <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools">
+            <span>Telefono Filter & Directive</span>
+            <span flex></span>
+        </div>
+        </md-toolbar>
+    
+      <md-content flex layout-padding ng-controller="telefonoController as tel">
+        <div layout="row">
+          <md-input-container>
+              <label>Telefono</label>
+              <input name="telefono" ng-model="tel.telefono" required md-maxlength="13" minlength="6">
+              <div ng-messages="tel.telefono.$error" ng-show="tel.telefono.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div> 
+        </md-input-container>
+        </div>
+        <div layout="column" >
+          <div flex>
+            <p>Telefono sin Filtro  <span ng-bind="tel.telefono "></span></p>
+          </div>
+          <div flex>
+            <p>Telefono con Filtro <span ng-bind="tel.telefono | tel"></span></p>
+          </div>
+        </div>
       </div>
-    </div>
+      <div layout="column" flex></div>
+  
+  </md-content>
+  </div>
   </body>
 
   <!-- Application Dependencies -->

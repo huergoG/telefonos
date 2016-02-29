@@ -3,7 +3,11 @@
     'use strict';
 	
 	angular
-		.module('demoApp',['telefono'])
+		.module('demoApp',['telefono','ngMaterial'])
+		.config(function($mdThemingProvider) {
+  			$mdThemingProvider.theme('default')
+    			.primaryPalette('teal');
+		})
 		.controller('telefonoController',telefonoController);
 
 		function telefonoController($scope){
