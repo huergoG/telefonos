@@ -43,7 +43,7 @@
       			var area = getArea(number);
       			var front =getFront(number,area,mobile,endInicio);
       			if (front!==''){
-      		  	formattedNumber =  int+" ("+c+area+")"+front+"-"+end;
+      		  	formattedNumber =  int+" ("+c+area+") "+front+"-"+end;
       		  	encontro=true;
       			}
     		  }

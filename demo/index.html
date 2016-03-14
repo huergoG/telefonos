@@ -17,12 +17,12 @@
             <span flex></span>
         </div>
         </md-toolbar>
-    
       <md-content flex layout-padding ng-controller="telefonoController as tel">
         <div layout="row">
           <md-input-container>
               <label>Telefono</label>
-              <input name="telefono" ng-model="tel.telefono" required ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}" md-maxlength="13" minlength="6">
+              <!--ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}"-->
+              <input name="telefono" ng-model="tel.telefono" telefono required  ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}">
               <div ng-messages="tel.telefono.$error" ng-show="tel.telefono.$dirty">
                 <div ng-message="required">This is required!</div>
                 <div ng-message="md-maxlength">That's too long!</div>
@@ -30,6 +30,17 @@
               </div> 
         </md-input-container>
         </div>
+        <!--<div layout="row">
+          <md-input-container>
+              <label>Telefono masked</label>
+              <input name="telefono" ng-model="tel.telefono" ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}" required  >
+              <div ng-messages="tel.telefono.$error" ng-show="tel.telefono.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div> 
+        </md-input-container>
+        </div>-->
         <div layout="column" >
           <div flex>
             <p>Telefono sin Filtro  <span ng-bind="tel.telefono "></span></p>
