@@ -17,13 +17,12 @@
             <span flex></span>
         </div>
         </md-toolbar>
-    
       <md-content flex layout-padding ng-controller="telefonoController as tel">
         <div layout="row">
           <md-input-container>
               <label>Telefono</label>
               <!--<input name="telefono" ng-model="tel.telefono"  ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}" md-maxlength="13" minlength="6">-->
-              <input name="telefono" ng-model="tel.telefono" md-maxlength="16 minlength="6" telefono ></input>
+              <input name="telefono" ng-model="tel.telefono" md-maxlength="16" minlength="6" telefono ></input>
               <div ng-messages="tel.telefono.$error" ng-show="tel.telefono.$dirty">
                 <div ng-message="required">This is required!</div>
                 <div ng-message="md-maxlength">That's too long!</div>
