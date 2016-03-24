@@ -8,29 +8,27 @@
 
 		function telefono(){
 			return {
-		     	template : '<div  ng-class="gridClass" ng-transclude ></div>',
+		     	//template : 'ui-mask="{{mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{mask_placeholder}}"',
 			  	restrict: 'A',
-		      	transclude: true,
-		      	replace:true,
-		      	scope:true,
+		      	transclude: false,
+		      	require: 'ngModel',
+		      	replace:false,
+		      	scope:{
+		      	},
+		      	compile: function ($scope,$element,$attrs){
+		      			//$element.$attr;
+		      			console.log("on compile",$scope,$element);
+
+		      	},
 		      	controller: function($scope, $element, $attrs, $injector){
-				// declare some default values
-				$scope.gridClass = 'userBox';
-				$scope.$on('grid-block-select', function(evt,
-						targetComponentId, command){
-						// check that our instance is the target
-						if(targetComponentId === $scope.$id){
-						// we can add any number of actions here
-					  if(command.setClass){
-						// change the button style from default
-							$scope.gridClass = 'userBox ' + command.setClass;
-						}
-						}else{
-						  $scope.gridClass = 'userBox';
-						}
-					});
+				// declare some default value
+					console.log("controller",$element,$attrs);
+					$scope.mask = "(99) 9999-9999";
+					$scope.mask_placeholder = "";
+				
 			  	},
 		      	link: function postLink(scope, element, attrs) {
+		      		console.log("link",element);
 		     	 }
 	    	};
 		}
