@@ -1,6 +1,6 @@
 {
   "name": "telefono_filter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "María Guadalupe Huergo",
   "description": "Este es un filtro de AngularJS para telefonos de Argentina, teniendo en cuenta las caracteristicas Nacionales.",
   "main": "gulpfile.js",
