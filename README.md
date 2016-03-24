@@ -1,14 +1,17 @@
-# Telefonos Directive & Filter
+# Telefonos Argentina Filter
  
-Este es un modulo de directve y filtro para telefonos de Argentina, teniendo en cuenta las caracteristicas Nacionales.
+Este es un filtro de AngularJS para telefonos de Argentina, teniendo en cuenta las caracteristicas Nacionales.
 
-El filtro formatea el numero dado para mostrarlo de la forma adecuada.
-La directiva utiliza [ui-mask](https://github.com/angular-ui/ui-mask) para poder dinamicamente acomodar de acuerdo al valor o lo ingresado la mascara correspondiente. 
+El filtro formatea el numero dado para mostrarlo de la forma adecuada. De acuerdo a las características disponibles en Argentina.
+
+Requerimientos
+	AngularJS 1.4.x
 
 #####Ejemplo 
 -**Telefonos Fijos** (11)xxxx-xxxx o (2296)xx-xxxx 
 -**Celulares** (11) 15 xxxx-xxxx o (0223) 15 xxx-xxxx
 
 ## Demo
-##Install
+##Instalación
+
 
