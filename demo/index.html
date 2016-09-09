@@ -1,0 +1,63 @@
+  <!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telefono Directive-Filter</title>
+    <link rel="stylesheet" href="../node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+   <!-- <link rel="stylesheet" type="text/css" href="style.css">-->
+  </head>
+  <body ng-app="demoApp">
+     <div layout="column" layout-fill>
+        <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools">
+            <span>Telefono Filter & Directive</span>
+            <span flex></span>
+        </div>
+        </md-toolbar>
+      <md-content flex layout-padding ng-controller="telefonoController as tel">
+        <div layout="row">
+          <md-input-container>
+              <label>Telefono</label>
+              <!--<input name="telefono" ng-model="tel.telefono"  ui-mask="{{tel.mask}}" ui-mask-placeholder ui-mask-placeholder-char="{{tel.mask_placeholder}}" md-maxlength="13" minlength="6">-->
+              <input name="telefono" ng-model="tel.telefono" md-maxlength="16" minlength="6" telefono ></input>
+              <div ng-messages="tel.telefono.$error" ng-show="tel.telefono.$dirty">
+                <div ng-message="required">This is required!</div>
+                <div ng-message="md-maxlength">That's too long!</div>
+                <div ng-message="minlength">That's too short!</div>
+              </div> 
+        </md-input-container>
+        </div>
+        <div layout="column" >
+          <div flex>
+            <p>Telefono sin Filtro  <span ng-bind="tel.telefono "></span></p>
+          </div>
+          <div flex>
+            <p>Telefono con Filtro <span ng-bind="tel.telefono | tel"></span></p>
+          </div>
+      </div>
+      <div layout="column" flex></div>
+  
+  </md-content>
+  </div>
+  </body>
+
+  <!-- Application Dependencies -->
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-material/angular-material.js"></script>
+  <script src="../node_modules/angular-animate/angular-animate.js"></script>
+  <script src="../node_modules/angular-aria/angular-aria.js"></script>
+  <script src="../node_modules/angular-md5/angular-md5.js"></script>
+  <script src="../node_modules/angular-ui-mask/dist/mask.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.5.0/angular-messages.min.js"></script>
+
+
+  <!-- Application Scripts -->
+  <script src="app.js"></script>
+  <script src="../src/codigoArea.js"></script>
+  <script src="../src/telefono.module.js"></script>
+  <script src="../src/telefonoFilter.js"></script>
+  <script src="../src/telefonoDirective.js"></script>
+</html>
